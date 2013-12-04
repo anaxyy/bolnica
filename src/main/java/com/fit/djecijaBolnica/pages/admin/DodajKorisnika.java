@@ -15,10 +15,7 @@ public class DodajKorisnika {
 
 	@Inject
 	private Session session;
-	/*
-	 * 
-	 * testtestasdasdasds
-	 */
+	
 	@Property
 	private User user;
 	
