@@ -1,0 +1,19 @@
+<html t:type="layout" title="Doktor"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+<div class="post" align="left">
+
+	<img
+		src="http://www.redcross.org.rs/slika_796_vesel%20bol%20decko%20i%20devojcica.jpg"
+		alt="symbol" width="330px" height="150px"></img>
+	<p></p>
+	<h1>
+		<strong>*VeSeLa BoLnIcA*</strong>
+	</h1>
+</div>
+
+
+</html>

@@ -1,0 +1,17 @@
+<html t:type="layout" title="Edit Cure"
+	t:sidebarTitle="Pages" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:zone t:id="zone">
+		<t:beaneditform t:id="lijek" object="lijek" submitLabel="Update"/>
+	</t:zone>
+	
+	<p:sidebar>
+         <p>
+        [
+         <t:pagelink page="admin/PrikazLijeka">Show Cure</t:pagelink>
+        ]
+        </p>
+    </p:sidebar>
+
+</html>

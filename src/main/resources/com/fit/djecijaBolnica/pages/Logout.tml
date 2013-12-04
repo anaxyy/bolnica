@@ -1,0 +1,13 @@
+<html t:type="layout" title="Login"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+      <body>
+		<h3> Logout Page</h3>
+		<h3> You are logged out! </h3>
+		<br/> <br/>
+		<p> [<t:pagelink t:page="admin/DodajKorisnika">Login page</t:pagelink>] </p>
+	</body>
+
+</html>

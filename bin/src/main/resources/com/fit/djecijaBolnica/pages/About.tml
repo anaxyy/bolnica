@@ -1,0 +1,7 @@
+<html t:type="layout" title="About djecijaBolnica"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>About djecijaBolnica application ...</p>
+
+</html>

@@ -1,0 +1,42 @@
+<html t:type="layout" title="Admin"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<h1 class="title"></h1>
+
+<div class="post" align="center">
+
+	<img
+		src="http://www.redcross.org.rs/slika_796_vesel%20bol%20decko%20i%20devojcica.jpg"
+		alt="symbol" width="330px" height="150px"></img>
+	<p></p>
+	<h1>
+		<strong>*VeSeLa BoLnIcA*</strong>
+	</h1>
+</div>
+
+
+<div align="center">
+	<p></p>
+	<h2>Meni</h2>
+	<p>
+		[
+		<t:pagelink page="admin/DodajKorisnika">Kreiraj Nalog</t:pagelink>
+		] [
+		<t:pagelink page="admin/PrikaziNalog">Prikazi Nalog</t:pagelink>
+		]
+	</p>
+
+	<p>
+		[
+		<t:pagelink page="admin/DodajLijek">Dodaj Lijek</t:pagelink>
+		] [
+		<t:pagelink page="admin/PrikazLijeka">Prikaz Lijeka</t:pagelink>
+		]
+	</p>
+
+
+</div>
+
+
+</html>

@@ -1,0 +1,37 @@
+<html t:type="layout" title="" t:sidebarTitle="Pages"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+
+    <body>
+	<table border="1">
+		<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Category</th>
+					<th>Manufacturer</th>
+					<th>Details</th>
+					
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr t:type="Loop" t:source="lijekovi" t:value="lijek">
+					<td>${lijek.id}</td>
+					<td>${lijek.name}</td>
+					<td>${lijek.type}</td>
+					<td>${lijek.category}</td>
+					<td>${lijek.manufacturer}</td>
+					<td>${lijek.details}</td>
+					<td><t:pagelink page="admin/EditovanjeLijeka" context="lijek.id">Edit</t:pagelink></td>
+					<td><t:actionlink t:id="delete" context="lijek.id">Delete</t:actionlink></td>
+					
+				</tr>
+			</tbody>
+	</table>
+</body>
+
+	
+</html>
+    		
