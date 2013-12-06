@@ -8,7 +8,10 @@ import org.hibernate.Session;
 
 import com.fit.djecijaBolnica.entities.User;
 import com.fit.djecijaBolnica.pages.Admin;
+import com.fit.djecijaBolnica.pages.Doktor;
 import com.fit.djecijaBolnica.pages.Index;
+import com.fit.djecijaBolnica.pages.MedSestra;
+import com.fit.djecijaBolnica.pages.Upravnik;
 import com.fit.djecijaBolnica.services.Security;
 
 public class Login {
@@ -36,14 +39,27 @@ public class Login {
 
 			System.out.println("Authentication succeeded!");
 			user = authenticatedUser;
-			nextPage = Admin.class;
+			
+			if (user.getUserType().equals("MEDICINSKA_SESTRA")) {
+				nextPage = MedSestra.class;
+			}
+
+			if (user.getUserType().equals("ADMIN")) {
+				nextPage = Admin.class;
+			}
+			if (user.getUserType().equals("UPRAVNIK")) {
+				nextPage = Upravnik.class;
+			}
+			if (user.getUserType().equals("DOKTOR")) {
+				nextPage = Doktor.class;
+			}
+			
 		} else {
 			System.out.println("Authentication failed!");
 			alert.info("Authentication failed!");
-//			nextPage = DodajKorisnika.class;
+			// nextPage = DodajKorisnika.class;
 		}
 
 		return nextPage;
 	}
-
 }

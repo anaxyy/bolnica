@@ -40,6 +40,6 @@
        
        </p>
        
-       <p>Logged user: ${username}</p>
+     <!-- <p>Logged user: ${username}</p> -->  
     </body>
 </html>

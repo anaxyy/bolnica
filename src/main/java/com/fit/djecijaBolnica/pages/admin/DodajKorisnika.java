@@ -15,7 +15,6 @@ public class DodajKorisnika {
 
 	@Inject
 	private Session session;
-	
 	@Property
 	private User user;
 	
