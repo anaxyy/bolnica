@@ -15,7 +15,7 @@ import com.fit.djecijaBolnica.pages.Admin;
 import com.fit.djecijaBolnica.pages.Doktor;
 import com.fit.djecijaBolnica.pages.MedSestra;
 import com.fit.djecijaBolnica.pages.Upravnik;
-@RequiresGuest
+@RequiresGuest // moze a i ne mora, jer je vec podeseno da je ovo login strana
 public class Login {
 
 	@Property
@@ -28,13 +28,15 @@ public class Login {
 	private AlertManager alert;
 
 	public Object onSuccess() {
+		
 		UsernamePasswordToken token = new UsernamePasswordToken(userName,
 				password);
 
-		Subject currentUser = SecurityUtils.getSubject();
+		Subject currentUser = SecurityUtils.getSubject(); // Subject je trenutni korisnik koji koristi aplikaciju, moze biti logovan i ne logovan
 
 		try {
-			currentUser.login(token);
+			currentUser.login(token); // pokusaj logovanja
+			
 		} catch (UnknownAccountException uae) {
 			System.out.println("Username not found!");
 			alert.info("Username not found!");

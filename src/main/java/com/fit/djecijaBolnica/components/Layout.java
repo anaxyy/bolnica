@@ -56,7 +56,7 @@ public class Layout
         return new String[]{"Admin", "Upravnik", "Doktor", "MedSestra"};
     }
     
-    @RequiresUser
+    @RequiresUser // metoda moze da se izvrsi samo ukoliko je korisnik logovan
     public Object onActionFromLogout(){
     	Subject currentUser = SecurityUtils.getSubject();
     	currentUser.logout();

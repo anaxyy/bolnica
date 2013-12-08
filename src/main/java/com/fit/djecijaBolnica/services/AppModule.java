@@ -67,7 +67,11 @@ public class AppModule {
 	public static void contributeSecurityConfiguration(
 			Configuration<SecurityFilterChain> configuration,
 			SecurityFilterChainFactory factory) {
+		
+		// konfiguracija pravila preko filtera i chain-ova
+		// http://shiro.apache.org/web.html#Web-AvailableFilters
 
+		// login stranu mogu anonimusi da vide (korisnici koji nisu logovani)
 		configuration.add(factory.createChain("/login").add(factory.anon())
 				.build());
 		
@@ -75,6 +79,7 @@ public class AppModule {
 		configuration.add(factory.createChain("/admin/dodajkorisnika").add(factory.anon())
 				.build());
 		
+		// sve sto je u paketu admin(stranice, fajlovi...) moze samo da vidi korisnik koji ima rolu ADMIN
 		configuration.add(factory.createChain("/admin/**").add(factory.roles(),"ADMIN")
 				.build());
 		
