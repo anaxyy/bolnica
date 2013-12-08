@@ -16,7 +16,7 @@
 </div>
 <p></p>
 <h2>
-	<a href="#" t:type="PageLink" t:page="admin/Login">[Login] </a>
+	<a href="#" t:type="PageLink" t:page="login">[Login] </a>
 </h2>
 
 

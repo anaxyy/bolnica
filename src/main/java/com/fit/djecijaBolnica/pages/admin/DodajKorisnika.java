@@ -10,6 +10,7 @@ import org.hibernate.Session;
 
 import com.fit.djecijaBolnica.entities.User;
 import com.fit.djecijaBolnica.pages.Admin;
+import com.fit.djecijaBolnica.pages.Login;
 
 public class DodajKorisnika {
 
@@ -43,8 +44,7 @@ public class DodajKorisnika {
 		if(user.getPassword().equals(password2)){
 			session.save(user);
 			info.info("User is added!!!");
-			nextPage = Login.class;
-			return nextPage;
+			return Login.class;
 		}else{
 			info.error("Passwords doesn't match!");
 			nextPage = DodajKorisnika.class;

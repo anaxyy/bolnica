@@ -9,7 +9,7 @@
         <h1>Login</h1>
         <p>
 
-        <t:form t:id="loginForm">
+        <t:form t:id="login">
         	<t:errors/>
             <table>
                 <tr>

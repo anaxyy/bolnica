@@ -1,14 +1,12 @@
 package com.fit.djecijaBolnica.pages;
 
-import java.util.Date;
-import org.apache.tapestry5.annotations.*;
-import org.apache.tapestry5.ioc.annotations.*;
-import org.apache.tapestry5.corelib.components.*;
-import org.apache.tapestry5.SymbolConstants;
-import org.apache.tapestry5.alerts.AlertManager;
+import org.apache.shiro.authz.annotation.Logical;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 
 /**
  * Start page of application djecijaBolnica.
  */
+@RequiresRoles(value = { "DOKTOR", "ADMIN" }, logical = Logical.OR)
 public class Doktor {
+
 }

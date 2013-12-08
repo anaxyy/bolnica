@@ -1,10 +1,15 @@
 package com.fit.djecijaBolnica.components;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresUser;
+import org.apache.shiro.subject.Subject;
 import org.apache.tapestry5.*;
 import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.ioc.annotations.*;
 import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.SymbolConstants;
+
+import com.fit.djecijaBolnica.pages.Index;
 
 /**
  * Layout component for pages of application djecijaBolnica.
@@ -48,6 +53,13 @@ public class Layout
 
     public String[] getPageNames()
     {
-        return new String[]{"Admin", "Upravnik", "Doktor", "MedSestra", "Logout"};
+        return new String[]{"Admin", "Upravnik", "Doktor", "MedSestra"};
+    }
+    
+    @RequiresUser
+    public Object onActionFromLogout(){
+    	Subject currentUser = SecurityUtils.getSubject();
+    	currentUser.logout();
+    	return Index.class;
     }
 }
