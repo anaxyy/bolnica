@@ -1,3 +1,4 @@
+
 package com.fit.djecijaBolnica.entities;
 
 import javax.persistence.Column;
@@ -44,6 +45,18 @@ public class Lijek {
 	// upotreba
 	@Column(name = "cure_details", nullable = false)
 	private String details;
+	
+	@NonVisual
+	@Column(name = "data_activity")
+	private boolean deleted;
+
+	public boolean isDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
+	}
 
 	public Long getId() {
 		return id;

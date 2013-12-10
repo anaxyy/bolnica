@@ -1,0 +1,37 @@
+<html t:type="layout" title="" t:sidebarTitle="Pages"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+
+    <body>
+	<table border="1">
+		<thead>
+				<tr>
+					<th>ID</th>
+					<th>Naziv</th>
+					<th>Latinski_Naziv</th>
+					<th>Porijeklo</th>
+					<th>Stadijum</th>
+					
+					
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr t:type="Loop" t:source="bolesti" t:value="bolest">
+					<td>${bolest.id}</td>
+					<td>${bolest.naziv}</td>
+					<td>${bolest.latinskiNaziv}</td>
+					<td>${bolest.porijeklo}</td>
+					<td>${bolest.stadijum}</td>
+					
+					<td><t:pagelink page="admin/EditujBolest" context="bolest.id">Edit</t:pagelink></td>
+					<td><t:actionlink t:id="delete" context="bolest.id">Delete</t:actionlink></td>
+					
+				</tr>
+			</tbody>
+	</table>
+</body>
+
+	
+</html>
+    		

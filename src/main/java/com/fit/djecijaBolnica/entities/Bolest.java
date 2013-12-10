@@ -1,13 +1,17 @@
 package com.fit.djecijaBolnica.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
+@Entity
+@Table(name = "bolest")
 public class Bolest {
 
 	@Id
@@ -15,7 +19,7 @@ public class Bolest {
 	@NonVisual
 	@Column(name = "disease_id")
 	private Long id;
-	
+
 	@Validate("required")
 	@Column(name = "naziv", nullable = false, unique = true)
 	private String naziv;
@@ -23,14 +27,18 @@ public class Bolest {
 	@Validate("required")
 	@Column(name = "latinski_naziv", nullable = false, unique = true)
 	private String latinskiNaziv;
-	
-	@Validate("required")
-	@Column(name = "porijeklo")
-	private String porijeklo; //nasledno, /steceno
-	
-	@Validate("required")
-	@Column(name = "stadijum")
-	private String stadijum;
+
+	@NonVisual
+	@Column(name = "data_activity")
+	private boolean deleted;
+
+	public boolean isDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
+	}
 
 	public Long getId() {
 		return id;
@@ -56,25 +64,4 @@ public class Bolest {
 		this.latinskiNaziv = latinskiNaziv;
 	}
 
-	public String getPorijeklo() {
-		return porijeklo;
-	}
-
-	public void setPorijeklo(String porijeklo) {
-		this.porijeklo = porijeklo;
-	}
-
-	public String getStadijum() {
-		return stadijum;
-	}
-
-	public void setStadijum(String stadijum) {
-		this.stadijum = stadijum;
-	}
-	
-	
-	
-	
-	
-	
 }

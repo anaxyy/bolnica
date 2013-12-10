@@ -1,0 +1,14 @@
+<html t:type="layout" title="Bolest" t:sidebarTitle="Content"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
+		from Layout.tml -->
+
+<t:beaneditform object="bolest" submitLabel="Add">
+<!-- 	<p:details>
+	<t:label for="details">Details</t:label>
+	<t:textarea t:id="details" value="bolest.details"></t:textarea>
+	</p:details> -->
+</t:beaneditform>
+
+</html>
