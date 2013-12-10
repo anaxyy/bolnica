@@ -49,7 +49,7 @@ public class EditujNalog {
 	@CommitAfter
 	Object onSuccess() {
 		session.update(user);
-		alertManager.info("The product is edited!!!");
+		alertManager.info("The account is edited!!!");
 		return null;
 
 	}

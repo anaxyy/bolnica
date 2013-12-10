@@ -15,7 +15,7 @@
 				<th>UserType</th>
 				<th>Gender</th>
 				<th>Email</th>
-				<th>Country</th>
+				
 				<th>Age</th>
 
 				<th>Edit</th>
@@ -34,7 +34,7 @@
 				<td>${user.userType}</td>
 				<td>${user.gender}</td>
 				<td>${user.email}</td>
-				<td>${user.country}</td>
+				
 				<td>${user.age}</td>
 
 				<td><t:pagelink page="admin/EditujNalog" context="user.id">Edit</t:pagelink></td>

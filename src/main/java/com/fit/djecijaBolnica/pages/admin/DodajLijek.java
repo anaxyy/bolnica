@@ -8,6 +8,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
 import com.fit.djecijaBolnica.entities.Lijek;
+import com.fit.djecijaBolnica.pages.Admin;
 import com.fit.djecijaBolnica.pages.Index;
 
 public class DodajLijek {
@@ -27,7 +28,7 @@ public class DodajLijek {
 	@CommitAfter
 	Object onSuccess() {
 		session.save(lijek);
-		return index; 
+		return Admin.class; 
 
 	}
 }

@@ -1,9 +1,12 @@
 package com.fit.djecijaBolnica.pages;
 
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.Logical;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
 import org.apache.tapestry5.annotations.Property;
 
+@RequiresRoles(value = { "UPRAVNIK" })
 public class Upravnik
 {
 //	@Inject

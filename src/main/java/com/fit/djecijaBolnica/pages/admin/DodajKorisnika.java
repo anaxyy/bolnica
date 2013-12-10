@@ -18,34 +18,34 @@ public class DodajKorisnika {
 	private Session session;
 	@Property
 	private User user;
-	
+
 	@Inject
 	private AlertManager info;
-	
+
 	@Property
 	private String password2;
-	
+
 	private Class nextPage = null;
-	
+
 	@CommitAfter
-	Object onSuccess(){
-		
+	Object onSuccess() {
+
 		List<User> lista = session.createCriteria(User.class).list();
-		
+
 		for (int i = 0; i < lista.size(); i++) {
-			
+
 			if (lista.get(i).getUsername().equals(user.getUsername())) {
 				info.error("Username exists!");
 				nextPage = DodajKorisnika.class;
 				return nextPage;
 			}
 		}
-		
-		if(user.getPassword().equals(password2)){
+
+		if (user.getPassword().equals(password2)) {
 			session.save(user);
 			info.info("User is added!!!");
-			return Login.class;
-		}else{
+			return Admin.class;
+		} else {
 			info.error("Passwords doesn't match!");
 			nextPage = DodajKorisnika.class;
 			return nextPage;

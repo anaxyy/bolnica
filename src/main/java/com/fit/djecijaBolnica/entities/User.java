@@ -53,9 +53,6 @@ public class User {
 	@Column(name = "email", nullable = false)
 	private String email;
 
-	@Column(name = "country")
-	private String country;
-
 	@Column(name = "age")
 	private double age;
 
@@ -130,14 +127,6 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
 	}
 
 	public double getAge() {
