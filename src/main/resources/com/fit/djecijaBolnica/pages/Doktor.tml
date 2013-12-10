@@ -1,8 +1,7 @@
-<html t:type="layout" title="Doktor"
-      t:sidebarTitle="Framework Version"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
-        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+<html t:type="layout" title="Doktor" t:sidebarTitle="Framework Version"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
 <div class="post" align="left">
 
@@ -13,6 +12,8 @@
 	<h1>
 		<strong>*VeSeLa BoLnIcA*</strong>
 	</h1>
+
+	<p>Logovan user je: ${logedUser}</p>
 </div>
 
 

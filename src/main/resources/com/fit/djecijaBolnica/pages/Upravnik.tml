@@ -11,6 +11,7 @@
 	<h1>
 		<strong>*VeSeLa BoLnIcA*</strong>
 	</h1>
+	<p>Logovan user je: ${logedUser}</p>
 </div>
 
 </html>
