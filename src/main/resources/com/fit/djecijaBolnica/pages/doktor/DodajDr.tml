@@ -1,0 +1,21 @@
+<html t:type="layout" title="DodajKorisnika"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<h1 class="title" align="left">Add user</h1>
+<p></p>
+
+	<t:beaneditform t:id="user" object="user" add="password2"
+		submitLabel="Sign up!"
+		>
+		<p:password>
+			<t:label for="password">Password</t:label>
+			<t:passwordfield t:id="password" value="user.password"></t:passwordfield>
+		</p:password>
+
+		<p:password2>
+			<t:label for="password2">Confirm password</t:label>
+			<t:passwordfield t:id="password2" value="password2"></t:passwordfield>
+		</p:password2>
+	</t:beaneditform>
+</html>

@@ -63,5 +63,5 @@ public class Login {
 			return MedSestra.class;
 		}
 		return null;
-	}
+}
 }

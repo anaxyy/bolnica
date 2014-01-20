@@ -54,7 +54,7 @@ public class User {
 	private String email;
 
 	@Column(name = "age")
-	private double age;
+	private int age;
 
 	public String getName() {
 		return name;
@@ -129,12 +129,14 @@ public class User {
 		this.email = email;
 	}
 
-	public double getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(double age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
+
+
 
 }

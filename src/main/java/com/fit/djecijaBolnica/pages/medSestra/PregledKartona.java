@@ -1,4 +1,4 @@
-package com.fit.djecijaBolnica.pages.admin;
+package com.fit.djecijaBolnica.pages.medSestra;
 
 import java.util.List;
 
@@ -6,33 +6,32 @@ import javax.inject.Inject;
 
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
-import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.hibernate.Session;
 
 import com.fit.djecijaBolnica.entities.Bolest;
+import com.fit.djecijaBolnica.entities.Pacijent;
 
-public class PrikazBolesti {
+public class PregledKartona {
+
 	@Inject
 	private Session session;
 
 	@Persist
 	@Property
-	private Bolest bolest;
+	private Pacijent pacijent;
 
-	public List<Bolest> getBolesti() {
-		return session.createCriteria(Bolest.class).list();
+	public List<Pacijent> getPacijenti() {
+		return session.createCriteria(Pacijent.class).list();
 	}
 
-	public Bolest findById(Long id) {
+	public Pacijent findById(Long id) {
 
 		if (id != null) {
-			return (Bolest) session.get(Bolest.class, id);
+			return (Pacijent) session.get(Pacijent.class, id);
 
 		} else {
 			return null;
 		}
 
 	}
-
-	
 }

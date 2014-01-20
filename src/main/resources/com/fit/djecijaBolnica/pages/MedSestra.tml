@@ -1,9 +1,9 @@
 <html t:type="layout" title="Medicinska sestra"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
 
-    
-    <div class="post" align="left">
+
+<div class="post" align="center">
 
 	<img
 		src="http://www.redcross.org.rs/slika_796_vesel%20bol%20decko%20i%20devojcica.jpg"
@@ -12,7 +12,15 @@
 	<h1>
 		<strong>*VeSeLa BoLnIcA*</strong>
 	</h1>
-	
+
+	<p>
+		[
+		<t:pagelink page="medSestra/OtvoriKarton">Otvori Karton</t:pagelink>
+		] [
+		<t:pagelink page="medSestra/PregledKartona">Prikazi Kartone</t:pagelink>
+		]
+	</p>
+
 	<p>Logovan user je: ${logedUser}</p>
 </div>
 

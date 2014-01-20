@@ -1,0 +1,33 @@
+<html t:type="layout" title="" t:sidebarTitle="Pages"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>ParentName</th>
+				<th>Lastname</th>
+				<th>BirthDate</th>
+				<th>JMBG</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr t:type="Loop" t:source="pacijenti" t:value="pacijent">
+				<td>${pacijent.id}</td>
+				<td>${pacijent.name}</td>
+				<td>${pacijent.parentName}</td>
+				<td>${pacijent.lastname}</td>
+				<td>${pacijent.birthDate}</td>
+				<td>${pacijent.JMBG}</td>
+				
+
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+
+</html>

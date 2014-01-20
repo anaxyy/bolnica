@@ -22,7 +22,19 @@ public class PrikazLijeka{
 	
 	
 	public List<Lijek> getLijekovi() {
-		return session.createCriteria(Lijek.class).list();
+		List<Lijek> lista =  session.createCriteria(Lijek.class).list();
+		
+	for (int i = 0; i < lista.size(); i++) {
+			
+			if (lista.get(i).isDeleted()) {
+				
+				lista.remove(i--);
+			}
+		
+		}
+		System.out.println(lista.size());
+		
+		return lista;
 	}
 	
 	public Lijek findById(Long id) {
@@ -37,12 +49,13 @@ public class PrikazLijeka{
 	}
 
 
-	@CommitAfter
-	Object onActionFromDelete(Long tId) {
-		Lijek t = findById(tId);
-		session.delete(t);
-		return null;
-
-	}
+//	@CommitAfter
+//	Object onActionFromDelete(Long tId) {
+//		Lijek l = findById(tId);
+//		session.update(l);
+//		l.setDeleted(true);
+//		return null;
+//
+//	}
 
 }

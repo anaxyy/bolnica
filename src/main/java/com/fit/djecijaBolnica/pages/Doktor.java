@@ -13,7 +13,7 @@ import org.hibernate.Session;
  */
 
 // ogranicavanje koje role mogu da pristupe ovoj stranici
-@RequiresRoles(value = { "DOKTOR", "ADMIN" }, logical = Logical.OR)
+@RequiresRoles(value = { "DOKTOR"})
 public class Doktor {
 
 	@Inject

@@ -34,6 +34,14 @@
 		<t:pagelink page="admin/PrikazLijeka">Prikaz Lijeka</t:pagelink>
 		]
 	</p>
+	
+	<p>
+		[
+		<t:pagelink page="admin/DodajBolest">Dodaj Bolest</t:pagelink>
+		] [
+		<t:pagelink page="admin/PrikazBolesti">Prikaz Bolesti</t:pagelink>
+		]
+	</p>
 
 	<p>Logovan user je: ${logedUser}</p>
 

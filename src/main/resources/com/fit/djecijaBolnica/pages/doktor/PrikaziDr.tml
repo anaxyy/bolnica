@@ -1,0 +1,50 @@
+<html t:type="layout" title="Browse User" t:sidebarTitle="Pages"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+
+				<th>Id</th>
+				<th>Name</th>
+				<th>Lastname</th>
+				<th>Username</th>
+				<th>Password</th>
+				<th>UserType</th>
+				<th>Gender</th>
+				<th>Email</th>
+				<th>Age</th>
+				<th>Tip Dr</th>
+
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr t:type="loop" t:source="doktori" t:value="dr">
+				<!-- Kako nam je u .java nazvano getNesto, pisemo u source to nesto -->
+
+				<td>${dr.user.id}</td>
+				<td>${dr.user.name}</td>
+				<td>${dr.user.lastname}</td>
+				<td>${dr.user.username}</td>
+				<td>${dr.user.password}</td>
+				<td>${dr.user.userType}</td>
+				<td>${dr.user.gender}</td>
+				<td>${dr.user.email}</td>
+				
+				<td>${dr.user.age}</td>
+				<td>${dr.tipDr}</td>
+
+				<td><t:pagelink page="admin/EditujNalog" context="user.id">Edit</t:pagelink></td>
+				<td><t:actionlink t:id="delete" context="user.id">Delete</t:actionlink></td>
+
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+
+</html>

@@ -68,20 +68,17 @@ public class AppModule {
 			Configuration<SecurityFilterChain> configuration,
 			SecurityFilterChainFactory factory) {
 		
-		// konfiguracija pravila preko filtera i chain-ova
-		// http://shiro.apache.org/web.html#Web-AvailableFilters
-
-		// login stranu mogu anonimusi da vide (korisnici koji nisu logovani)
-		configuration.add(factory.createChain("/login").add(factory.anon())
-				.build());
-		
-		//  ovo pravilo dozvoljava dodavanje korisnika radi testiranja, inace se nebi moglo pristupiti zbog sledeceg pravila
-		configuration.add(factory.createChain("/admin/dodajkorisnika").add(factory.anon())
-				.build());
-		
-		// sve sto je u paketu admin(stranice, fajlovi...) moze samo da vidi korisnik koji ima rolu ADMIN
-		configuration.add(factory.createChain("/admin/**").add(factory.roles(),"ADMIN")
-				.build());
+//		// konfiguracija pravila preko filtera i chain-ova
+//		// http://shiro.apache.org/web.html#Web-AvailableFilters
+//
+//		// login stranu mogu anonimusi da vide (korisnici koji nisu logovani)
+//		configuration.add(factory.createChain("/login").add(factory.anon()).build());
+//		
+//		//  ovo pravilo dozvoljava dodavanje korisnika radi testiranja, inace se nebi moglo pristupiti zbog sledeceg pravila
+//		configuration.add(factory.createChain("/admin/dodajkorisnika").add(factory.anon()).build());
+//		
+//		// sve sto je u paketu admin(stranice, fajlovi...) moze samo da vidi korisnik koji ima rolu ADMIN
+//		configuration.add(factory.createChain("/admin/**").add(factory.roles(),"ADMIN").build());
 		
 	}
 
