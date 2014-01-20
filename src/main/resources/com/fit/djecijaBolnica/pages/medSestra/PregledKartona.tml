@@ -7,21 +7,28 @@
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Name</th>
-				<th>ParentName</th>
-				<th>Lastname</th>
-				<th>BirthDate</th>
+				<th>Ime</th>
+				<th>Ime roditelja</th>
+				<th>Prezime</th>
+				<th>Pol</th>
+				<th>Datum rodjenja</th>
 				<th>JMBG</th>
+				<th>Krvna grupa</th>
+				<th>Izabrani doktor</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr t:type="Loop" t:source="pacijenti" t:value="pacijent">
 				<td>${pacijent.id}</td>
-				<td>${pacijent.name}</td>
-				<td>${pacijent.parentName}</td>
-				<td>${pacijent.lastname}</td>
-				<td>${pacijent.birthDate}</td>
+				<td>${pacijent.ime}</td>
+				<td>${pacijent.imeRoditelja}</td>
+				<td>${pacijent.prezime}</td>
+				<td>${pacijent.pol}</td>
+				<td>${pacijent.datumRodjenja}</td>
 				<td>${pacijent.JMBG}</td>
+				<td>${pacijent.krvnaGrupa}</td>
+				<td>${pacijent.user.name}</td>
+				
 				
 
 			</tr>

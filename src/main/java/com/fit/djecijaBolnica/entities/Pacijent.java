@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.apache.tapestry5.beaneditor.NonVisual;
@@ -52,10 +54,10 @@ public class Pacijent {
 	private KrvnaGrupa krvnaGrupa;
 	
 	
-//	@Validate("required")
-//	@ManyToOne(optional = false)
-//	@JoinColumn(name = "pacijent_user_id")
-//	private User izabraniDoktor;
+	@Validate("required")
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "pacijent_user_id")
+	private User izabraniDoktor;
 	
 
 	public String getIme() {
@@ -100,14 +102,13 @@ public class Pacijent {
 	}
 
 
+	public User getIzabraniDoktor() {
+		return izabraniDoktor;
+	}
 
-//	public User getIzabraniDoktor() {
-//		return izabraniDoktor;
-//	}
-//
-//	public void setIzabraniDoktor(User izabraniDoktor) {
-//		this.izabraniDoktor = izabraniDoktor;
-//	}
+	public void setIzabraniDoktor(User izabraniDoktor) {
+		this.izabraniDoktor = izabraniDoktor;
+	}
 
 	public KrvnaGrupa getKrvnaGrupa() {
 		return krvnaGrupa;

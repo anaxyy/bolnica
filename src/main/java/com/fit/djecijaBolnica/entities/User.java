@@ -12,9 +12,17 @@ import javax.persistence.Table;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
+import bsh.This;
+
 @Entity
 @Table(name = "user")
 public class User {
+	
+	
+	public User() {
+		this.imePrezime = getName() + " " + getLastname();
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@NonVisual
@@ -32,6 +40,10 @@ public class User {
 	@Validate("required")
 	@Column(name = "lastname", nullable = false)
 	private String lastname;
+	
+	@Validate("required")
+	@Column(name = "imePrezime", nullable = false)
+	private String imePrezime;
 
 	@Validate("required")
 	@Column(name = "username", nullable = false, unique = true)
