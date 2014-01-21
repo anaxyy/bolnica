@@ -26,6 +26,14 @@
 		<t:pagelink page="admin/PrikaziNalog">Prikazi Nalog</t:pagelink>
 		]
 	</p>
+	
+	<p>
+		[
+		<t:pagelink page="admin/DodajDr">Dodaj Doktora</t:pagelink>
+		] [
+		<t:pagelink page="admin/PrikaziDr">Prikazi Doktora</t:pagelink>
+		]
+	</p>
 
 	<p>
 		[
@@ -42,6 +50,8 @@
 		<t:pagelink page="admin/PrikazBolesti">Prikaz Bolesti</t:pagelink>
 		]
 	</p>
+	
+	
 
 	<p>Logovan user je: ${logedUser}</p>
 

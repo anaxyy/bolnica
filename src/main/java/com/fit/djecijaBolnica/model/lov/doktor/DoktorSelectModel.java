@@ -1,4 +1,4 @@
-package com.fit.djecijaBolnica.model.lov.user;
+package com.fit.djecijaBolnica.model.lov.doktor;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,16 +8,17 @@ import org.apache.tapestry5.OptionGroupModel;
 import org.apache.tapestry5.OptionModel;
 import org.apache.tapestry5.util.AbstractSelectModel;
 
+import com.fit.djecijaBolnica.entities.DoktorSpec;
 import com.fit.djecijaBolnica.entities.User;
 
 
 
-public class UserSelectModel extends AbstractSelectModel{
+public class DoktorSelectModel extends AbstractSelectModel{
 	
-	private Collection<User> user; 
+	private Collection<DoktorSpec> izabraniDoktor; 
 
-	public UserSelectModel(Collection<User> users) {
-		this.user = users;
+	public DoktorSelectModel(Collection<DoktorSpec> doktori) {
+		this.izabraniDoktor = doktori;
 	}
 
 	public List<OptionGroupModel> getOptionGroups() {
@@ -26,8 +27,8 @@ public class UserSelectModel extends AbstractSelectModel{
 
 	public List<OptionModel> getOptions() {
 		List<OptionModel> list = new ArrayList<OptionModel>();
-		for (User u : user) {
-			list.add(new UserOptionModel(u));
+		for (DoktorSpec d : izabraniDoktor) {
+			list.add(new DoktorOptionModel(d));
 		}
 		return list;
 	}

@@ -2,15 +2,14 @@
 	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	xmlns:p="tapestry:parameter">
 
-<h1 class="title" align="left">Add user</h1>
+<h1 class="title" align="left"> Dodaj doktora</h1>
 <p></p>
 
-	<t:beaneditform t:id="user" object="user" add="password2"
-		submitLabel="Sign up!"
-		>
+	<t:beaneditform t:id="dr" object="dr" add="password2"
+		submitLabel="Sign up!" reorder="nameLastname, username, password, password2">
 		<p:password>
 			<t:label for="password">Password</t:label>
-			<t:passwordfield t:id="password" value="user.password"></t:passwordfield>
+			<t:passwordfield t:id="password" value="dr.password"></t:passwordfield>
 		</p:password>
 
 		<p:password2>

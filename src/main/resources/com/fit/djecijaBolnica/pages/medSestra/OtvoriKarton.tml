@@ -4,7 +4,13 @@
 <!-- Most of the page content, including <head>, <body>, etc. tags, comes 
 		from Layout.tml -->
 
-<t:beaneditform object="pacijent" submitLabel="Add">
+<t:beaneditform object="pacijent" submitLabel="Add" add="doktor"
+	t:reorder="imePrezime, imeRoditelja, pol, datumRodjenja, mjestoRodjenja, JMBG, krvnaGrupa, doktor,adresa, tel">
+	<p:doktor>
+		<t:label for="doktor">Izabrani doktor</t:label>
+		<t:select t:id="doktor" t:model="doktorModel" t:value="selectedDoktor"
+			t:encoder="doktorEncoder" />
+	</p:doktor>
 
 </t:beaneditform>
 

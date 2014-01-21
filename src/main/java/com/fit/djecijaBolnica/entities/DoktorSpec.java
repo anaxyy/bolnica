@@ -13,18 +13,19 @@ public class DoktorSpec extends User {
 	
 	public DoktorSpec() {
 		super.setUserType(Type.DOKTOR);	
+		
 	}
 	
 	@Validate("required")
-	@Column(name = "tipDr", nullable = false)
-	private String tipDr;
+	@Column(name = "tipDr", nullable = true)
+	private TipDr tipDr;
 
 
-	public String getTipDr() {
+	public TipDr getTipDr() {
 		return tipDr;
 	}
 
-	public void setTipDr(String tipDr) {
+	public void setTipDr(TipDr tipDr) {
 		this.tipDr = tipDr;
 	}
 	

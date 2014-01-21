@@ -1,4 +1,4 @@
-package com.fit.djecijaBolnica.pages.doktor;
+package com.fit.djecijaBolnica.pages.admin;
 
 import java.util.List;
 
