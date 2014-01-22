@@ -69,11 +69,11 @@ public class Pacijent {
 	@Column(name = "krvnaGrupa", nullable = false)
 	private KrvnaGrupa krvnaGrupa;
 
-//
-//	@Validate("required")
-//	@ManyToOne(optional = false)
-//	@JoinColumn(name = "pacijent_dr_id")
-//	private DoktorSpec doktor;
+
+	@Validate("required")
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "pacijent_dr_id")
+	private DoktorSpec doktor;
 
 	public String getMjestoRodjenja() {
 		return mjestoRodjenja;
@@ -123,15 +123,15 @@ public class Pacijent {
 		this.datumRodjenja = datumRodjenja;
 	}
 
-//	public DoktorSpec getDoktor() {
-//		return doktor;
-//	}
-//
-//
-//	public void setDoktor(DoktorSpec dr) {
-//		this.doktor = dr;
-//
-//	}
+	public DoktorSpec getDoktor() {
+		return doktor;
+	}
+
+
+	public void setDoktor(DoktorSpec dr) {
+		this.doktor = dr;
+
+	}
 
 	public KrvnaGrupa getKrvnaGrupa() {
 		return krvnaGrupa;

@@ -28,18 +28,18 @@ public class OtvoriKarton {
 	@Inject
 	private AlertManager manager;
 	
-//	@Persist
-//	@Property
-//	private DoktorSpec selectedDoktor;
-//	
-//	public SelectModel getDoktorModel() {
-//		return new DoktorSelectModel(session.createCriteria(DoktorSpec.class)
-//				.list());
-//	}
-//
-//	public ValueEncoder getDoktorEncoder() {
-//		return new DoktorEncoder(session);
-//	}
+	@Persist
+	@Property
+	private DoktorSpec selectedDoktor;
+	
+	public SelectModel getDoktorModel() {
+		return new DoktorSelectModel(session.createCriteria(DoktorSpec.class)
+				.list());
+	}
+
+	public ValueEncoder getDoktorEncoder() {
+		return new DoktorEncoder(session);
+	}
 	
 
 
@@ -47,10 +47,10 @@ public class OtvoriKarton {
 	Object onSuccess() {
 		if (pacijent.getJMBG().length() == 13) {
 
-			//pacijent.setDoktor(selectedDoktor);
+			pacijent.setDoktor(selectedDoktor);
 			session.save(pacijent);
 			info.info("Pacient is added!!!");
-			//this.selectedDoktor=null;
+			this.selectedDoktor=null;
 
 			return MedSestra.class;
 		}
