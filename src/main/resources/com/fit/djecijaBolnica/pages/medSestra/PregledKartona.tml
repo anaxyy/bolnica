@@ -3,33 +3,42 @@
 	xmlns:p="tapestry:parameter">
 
 <body>
+ <!-- treba mi searchhhhh! :( -->
 	<table border="1">
 		<thead>
 			<tr>
-				<th>ID</th>
-				<th>Ime</th>
-				<th>Ime roditelja</th>
-				<th>Prezime</th>
+				<th>Ime i Prezime</th>
 				<th>Pol</th>
+				<th>Ime roditelja</th>
 				<th>Datum rodjenja</th>
 				<th>JMBG</th>
-				<th>Krvna grupa</th>
+				<th>Mjesto rodjenja</th>
+				<th>Adresa</th>
+				<th>Broj telefona</th>
+				<th>Krva grupa</th>
 				<th>Izabrani doktor</th>
+				<th>Edit</th>
+				<th>Delete</th>
+
 			</tr>
 		</thead>
 		<tbody>
 			<tr t:type="Loop" t:source="pacijenti" t:value="pacijent">
 				<td>${pacijent.id}</td>
-				<td>${pacijent.ime}</td>
-				<td>${pacijent.imeRoditelja}</td>
-				<td>${pacijent.prezime}</td>
+				<td>${pacijent.imePrezime}</td>
 				<td>${pacijent.pol}</td>
+				<td>${pacijent.imeRoditelja}</td>
 				<td>${pacijent.datumRodjenja}</td>
 				<td>${pacijent.JMBG}</td>
+				<td>${pacijent.mjestoRodjenja}</td>
+				<td>${pacijent.adresa}</td>
+				<td>${pacijent.tel}</td>
 				<td>${pacijent.krvnaGrupa}</td>
-				<td>${pacijent.user.name}</td>
-				
-				
+				<td>${pacijent.doktor.nameLastname}</td>
+
+				<td><t:pagelink page="medSestra/EditKarton"
+						context="pacijent.id">Edit</t:pagelink></td>
+				<td><t:actionlink t:id="delete" context="pacijent.id">Delete</t:actionlink></td>
 
 			</tr>
 		</tbody>

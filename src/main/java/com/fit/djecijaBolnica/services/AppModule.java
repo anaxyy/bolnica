@@ -68,9 +68,9 @@ public class AppModule {
 			Configuration<SecurityFilterChain> configuration,
 			SecurityFilterChainFactory factory) {
 		
-//		// konfiguracija pravila preko filtera i chain-ova
-//		// http://shiro.apache.org/web.html#Web-AvailableFilters
-//
+		// konfiguracija pravila preko filtera i chain-ova
+		// http://shiro.apache.org/web.html#Web-AvailableFilters
+
 //		// login stranu mogu anonimusi da vide (korisnici koji nisu logovani)
 //		configuration.add(factory.createChain("/login").add(factory.anon()).build());
 //		

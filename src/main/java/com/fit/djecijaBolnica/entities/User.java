@@ -17,71 +17,59 @@ import bsh.This;
 @Entity
 @Table(name = "user")
 public class User {
-	
-	
-	public User() {
-		this.imePrezime = getName() + " " + getLastname();
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@NonVisual
 	@Column(name = "user_id")
-	private Long id;
+	protected Long id;
+
 
 	@NonVisual
 	@Column(name = "data_activity")
-	private boolean deleted;
+	protected boolean deleted;
 
 	@Validate("required")
-	@Column(name = "name", nullable = false)
-	private String name;
+	@Column(name = "nameLastname", nullable = false)
+	protected String nameLastname;
+
 
 	@Validate("required")
 	@Column(name = "lastname", nullable = false)
 	private String lastname;
 	
-	@Validate("required")
-	@Column(name = "imePrezime", nullable = false)
-	private String imePrezime;
 
 	@Validate("required")
 	@Column(name = "username", nullable = false, unique = true)
-	private String username;
+	protected String username;
 
 	@Validate("required")
 	@Column(name = "password", nullable = false)
-	private String password;
+	protected String password;
 
 	@Validate("required")
 	@Column(name = "user_type", nullable = false)
 	@Enumerated(EnumType.STRING)
-	private Type userType;
+	protected Type userType;
 
 	@Column(name = "gender")
 	@Enumerated(EnumType.STRING)
-	private Gender gender;
+	protected Gender gender;
 
 	@Column(name = "email", nullable = false)
-	private String email;
+	protected String email;
 
 	@Column(name = "age")
-	private int age;
+	protected int age;
 
-	public String getName() {
-		return name;
+
+
+	public String getNameLastname() {
+		return nameLastname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setNameLastname(String nameLastname) {
+		this.nameLastname = nameLastname;
 	}
 
 	public Long getId() {

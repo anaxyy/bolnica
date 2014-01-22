@@ -7,7 +7,7 @@
 
 	<t:beaneditform t:id="user" object="user" add="password2"
 		submitLabel="Sign up!"
-		reorder="name, lastname, userType, username, password, password2">
+		reorder="nameLastname, userType, username, password, password2">
 		<p:password>
 			<t:label for="password">Password</t:label>
 			<t:passwordfield t:id="password" value="user.password"></t:passwordfield>

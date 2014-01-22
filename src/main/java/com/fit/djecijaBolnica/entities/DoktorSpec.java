@@ -7,16 +7,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import net.sourceforge.htmlunit.corejs.javascript.ast.IfStatement;
-
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
-import org.apache.tapestry5.corelib.components.If;
 
 
 @Entity
 @Table(name="doktori")
-public class DoktorSpec {
+public class DoktorSpec extends User{
 
 
 	@Id
@@ -24,19 +21,40 @@ public class DoktorSpec {
 	@NonVisual
 	@Column(name = "dr_id")
 	private Long id;
-	
+
 	
 	@Validate("required")
 	@Column(name = "tipDr", nullable = true)
 	private String tipDr;
 	
+
+	public DoktorSpec() {
+		super.setUserType(Type.DOKTOR);
+			
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
 	public String getTipDr() {
 		return tipDr;
 	}
 
+
 	public void setTipDr(String tipDr) {
 		this.tipDr = tipDr;
 	}
+
+
+	
 	
 	
 
